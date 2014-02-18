@@ -27,12 +27,6 @@ class Robot(wp.SimpleRobot):
     def Restart(self):
         raise SystemExit("Robot Restart() called")
 
-    def AddButtonToggle(self, toggle_button, on_function, off_function=None):
-        self.toggles.append(Toggle(partial(self.joystick.GetRawButton, 8), on_function, off_function))
-    def UpdateToggles(self):
-        for toggle in self.toggles:
-            toggle.update()
-
     def Disabled(self):
         while self.IsDisabled():
             self.CheckRestart()
