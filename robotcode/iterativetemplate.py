@@ -3,5 +3,6 @@ try:
 except:
     from pyfrc import wpilib
 
-class meerkat(wpilib.IterativeRobot):
-    pass
+if __name__ == "__main__":
+    import frcupload
+    frcupload.run(__file__)

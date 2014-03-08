@@ -31,3 +31,7 @@ class Robot(wp.SimpleRobot):
 def run():
     robot = Robot()
     robot.StartCompetition()
+
+if __name__ == "__main__":
+    import frcupload
+    frcupload.run(__file__)
