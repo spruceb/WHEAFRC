@@ -12,7 +12,7 @@ def parser_setup():
     parser = argparse.ArgumentParser(description="Automated uploading of robot code that also restores network settings")
     parser.add_argument("code", default="robot.py", help="the path of the file to be uploaded")
     parser.add_argument("-tn", type=int, nargs="?", default=3881, help="FRC team number")
-    parser.add_argument("-ip-end", type=int, nargs="?", default=6, help="Last byte of the IP")
+    parser.add_argument("-ip-end", type=int, nargs="?", default=12, help="Last byte of the IP")
     parser.add_argument("--no-reboot", action="store_true", help="Prevents the cRIO from rebooting after upload")
     parser.add_argument("--ethernet", action="store_const", const="en0", dest="interface")
     return parser
